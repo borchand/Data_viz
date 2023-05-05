@@ -27,3 +27,7 @@ And some race data:
 results.csv & sprint_results.csv are total overviews of a race for every driver, with both fastest lap times with their number, grid, position etc.
 
 1095 - 825
+
+## Visualisation
+### Verstappen (blue) vs Magnussen (white) in Brazil qualifying 2022
+![Max vs Mag in Brazil qualifying 2022](https://github.com/borchand/Data_viz/blob/main/first_fastest.png)
