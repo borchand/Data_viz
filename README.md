@@ -1,4 +1,13 @@
 # Data_viz
+## Our Story
+1. Setting the stage 
+- Brazilian grandprix: qualifying positions previous years (team level)
+- This season: qualifying position (driver level)
+- Weather?
+2. Visualising the lap 
+3. Visualising the track temp/red flag
+4. Weather?
+
 
 ## Data
 ### Kaggle
