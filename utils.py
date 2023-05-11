@@ -8,11 +8,25 @@ from datetime import timedelta, datetime
 TRACK_DISTANCE = 4.309
 
 def get_session(year = 2022, round = 21, session = 'Q'):
+    """
+    This function retrieves and loads telemetry, weather, and lap data for a specified Formula 1
+    session.
+    
+    :param year: The year of the Formula 1 season for which you want to get the session data. The
+    default value is 2022, defaults to 2022 (optional)
+    :param round: The round parameter refers to the specific race round of the Formula 1 season. For
+    example, the first round of the 2022 season was the Bahrain Grand Prix, while the second round was
+    the Saudi Arabian Grand Prix, defaults to 21 (optional)
+    :param session: The `session` parameter is a string that specifies the type of session to retrieve
+    data for. defaults to Q (optional)
+    :return: The function `get_session` is returning the `fastf1` session object for a given year,
+    round, and session type (qualifying or race). The session object is loaded with lap data, telemetry
+    data, and weather data.
+    """
     session = fastf1.get_session(year, round, session)
     session.load(laps=True, telemetry=True, weather=True)
-    laps = session.laps
 
-    return session, laps
+    return session
 
 def IsTurn(x,y,x_last_turn,y_last_turn, turn_difference=1300):
     if x + turn_difference < x_last_turn:
