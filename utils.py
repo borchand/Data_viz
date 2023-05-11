@@ -28,6 +28,22 @@ def get_session(year = 2022, round = 21, session = 'Q'):
 
     return session
 
+def get_qualifying(session):
+    """
+    The function returns the qualifying sessions split into three separate sessions.
+    
+    :param session: The parameter "session" is a `fastf1` session object. The function "get_qualifying" takes this
+    session object as input and returns the lap times for each of the three qualifying sessions (q1, q2,
+    q3).
+    :return: three variables: q1, q2, and q3, which are the qualifying sessions split from the laps in
+    the input session.
+    """
+    laps = session.laps
+    q1, q2, q3 = laps.split_qualifying_sessions()
+
+    return q1, q2, q3
+
+
 def IsTurn(x,y,x_last_turn,y_last_turn, turn_difference=1300):
     if x + turn_difference < x_last_turn:
         return True        
