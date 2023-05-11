@@ -7,6 +7,13 @@ from datetime import timedelta, datetime
 
 TRACK_DISTANCE = 4.309
 
+def get_session(year = 2022, round = 21, session = 'Q'):
+    session = fastf1.get_session(year, round, session)
+    session.load(laps=True, telemetry=True, weather=True)
+    laps = session.laps
+
+    return session, laps
+
 def IsTurn(x,y,x_last_turn,y_last_turn, turn_difference=1300):
     if x + turn_difference < x_last_turn:
         return True        
