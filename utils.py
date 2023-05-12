@@ -6,6 +6,8 @@ import pandas as pd
 from datetime import timedelta, datetime
 
 TRACK_DISTANCE = 4.309
+MAG_QUALIFYING_LAP = 25
+VER_QUALIFYING_LAP = 22
 
 def get_session(year = 2022, round = 21, session = 'Q'):
     """
@@ -129,3 +131,13 @@ def convert_delta_to_time(delta):
     datetime_0 = datetime(1900,1,1,0,0,0)
 
     return (datetime_0 + delta)
+
+def get_qualifying_laps_for_mag_and_ver(qualifying_session):
+
+    fast_ver = qualifying_session.pick_driver("VER")
+    fast_mag = qualifying_session.pick_driver("MAG")
+
+    best_lap_mag = fast_mag.pick_lap(MAG_QUALIFYING_LAP).get_car_data()
+    best_lap_ver = fast_ver.pick_lap(VER_QUALIFYING_LAP).get_car_data()
+
+    return best_lap_mag, best_lap_ver
