@@ -117,12 +117,13 @@ def compare_minisectors(lap_tel_1, lap_tel_2, turn_difference=800):
 
     for i in range(len(mini_sectors_1)):
         first_fastest.append(mini_sectors_1[i] < mini_sectors_2[i])
-    
+
     return idx, first_fastest
 
 def convert_string_to_time(string):
     string = string.split(" ")[-1]
     return datetime.strptime(string, '%H:%M:%S.%f')
+
 
 def convert_delta_to_time(delta):
     datetime_0 = datetime(1900,1,1,0,0,0)
