@@ -5,8 +5,9 @@
 - This season: qualifying position (driver level)
 - Weather?
 2. Visualising the lap 
-3. Visualising the track temp/red flag
-4. Weather?
+![Max vs Mag in Brazil qualifying 2022](https://github.com/borchand/Data_viz/blob/main/figures/lap_animation.gif)
+4. Visualising the track temp/red flag
+5. Weather?
 
 
 ## Data
@@ -39,4 +40,4 @@ results.csv & sprint_results.csv are total overviews of a race for every driver,
 
 ## Visualisation
 ### Verstappen (blue) vs Magnussen (white) in Brazil qualifying 2022
-![Max vs Mag in Brazil qualifying 2022](https://github.com/borchand/Data_viz/blob/main/first_fastest.png)
+![Max vs Mag in Brazil qualifying 2022](https://github.com/borchand/Data_viz/blob/main/figures/first_fastest.png)
