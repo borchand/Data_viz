@@ -132,6 +132,15 @@ def convert_delta_to_time(delta):
 
     return (datetime_0 + delta)
 
+def convert_time_to_date(base_date, date_time):
+    
+    total_seconds = date_time.hour * 3600 + date_time.minute * 60 + date_time.second
+    
+    return base_date + timedelta(seconds=total_seconds)
+    
+    
+
+
 def get_qualifying_laps_for_mag_and_ver(qualifying_session):
 
     fast_ver = qualifying_session.pick_driver("VER")
